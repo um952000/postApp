@@ -1,0 +1,22 @@
+<h2 *ngIf="!isEdit">{{title}}</h2>
+<h2 *ngIf="!isEdit">{{content}}</h2>
+
+<div *ngIf="post">
+    <h2>Edit Post</h2>
+    <form (ngSubmit)="updatePost()">
+        <div *ngIf="isEdit">
+            <label for="title">Title:</label>
+            <input id="title" [(ngModel)]="title" name="title" required>
+        </div>
+        <div *ngIf="isEdit">
+            <label for="author">Author:</label>
+            <input id="author" [(ngModel)]="author" name="author" required>
+        </div>
+        <div *ngIf="isEdit">
+            <label for="content">Content:</label>
+            <textarea id="content" [(ngModel)]="content" name="content"
+                required></textarea>
+        </div>
+        <button type="submit">{{isEdit?'Save':'Edit'}}</button>
+    </form>
+</div>

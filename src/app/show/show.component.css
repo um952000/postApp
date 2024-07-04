@@ -1,0 +1,28 @@
+/* Styles for Show Post Component */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.post {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+li.post h2 {
+    margin-top: 0;
+}
+
+li.post p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+ng-template {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}

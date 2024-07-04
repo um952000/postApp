@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<p>Create Post</p>
+
+<form #form="ngForm" (ngSubmit)="postFormSubmit(form)">
+
+    <label for="title">TITLE: </label>
+    <input type="text" id="title" name="title" placeholder="POST TITLE" ngModel
+        required /><br /><br />
+
+    <label for="content">CONTENT: </label>
+    <input type="text" id="content" name="content" placeholder="POST CONTENT"
+        ngModel
+        required /><br /><br />
+
+    <label for="author">AUTHOR: </label>
+    <input type="text" id="author" name="author" placeholder="AUTHOR NAME"
+        ngModel
+        required /><br /><br />
+
+    <label for="date">DATE: </label>
+    <input type="date" id="date" name="date" placeholder="DATE" ngModel
+        required /><br /><br />
+
+    <label for="age">AGE: </label>
+    <input type="text" id="age" name="age" #age="ngModel" placeholder="AGE"
+        ngModel
+        required /><br /><br />
+
+    <p *ngIf="!age.valid && age.touched">Please Enter a valid age</p>
+    <button type="submit">SUBMIT</button>
+
+</form>
